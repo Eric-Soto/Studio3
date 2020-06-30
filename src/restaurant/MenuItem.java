@@ -5,12 +5,13 @@ import java.util.Date;
 
 public class MenuItem {
 
-    public MenuItem(String name, double price, String description, String category) {
+    public MenuItem(String name, double price, String description, String category, boolean isNew) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
         this.dateAdded = new Date();
+        this.isNew = isNew;
     }
     private String name;
 
@@ -28,6 +29,22 @@ public class MenuItem {
     private String category;
     private boolean isNew = true;
     private Date dateAdded;
+
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
+    }
+
+    public Date getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(Date dateAdded) {
+        this.dateAdded = dateAdded;
+    }
 
     public double getPrice() {
         return price;
